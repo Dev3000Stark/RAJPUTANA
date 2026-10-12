@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join the Journey | RAJPUTANA</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/auth.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-symbol">✦</span>
+                <span class="logo-text">
+                    RAJPUTANA
+                    <small>TOURISM & ADVENTURE</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="seasons.html">Seasons</a>
+                <a href="map.html">Journey Map</a>
+                <a href="about.html">Our Story</a>
+                <a href="register.html" class="nav-cta">Create Account ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <main class="auth-page">
+
+        <section class="auth-visual">
+            <div class="auth-visual-content">
+
+                <span class="eyebrow">YOUR NEXT ADVENTURE AWAITS</span>
+
+                <h1>
+                    Every journey
+                    begins with
+                    <span>a story.</span>
+                </h1>
+
+                <p>
+                    Discover royal forts, golden deserts, peaceful lakes
+                    and hidden treasures across the incredible land of Rajasthan.
+                </p>
+
+                <div class="auth-highlight">
+                    <span class="highlight-icon">✦</span>
+                    <div>
+                        <strong>Your journey. Your memories.</strong>
+                        <p>Explore Rajasthan your own way.</p>
+                    </div>
+                </div>
+
+                <span class="auth-padharo">पधारो म्हारे देश</span>
+
+            </div>
+        </section>
+
+        <section class="auth-form-section">
+
+            <div class="auth-card">
+
+                <a href="../index.html" class="auth-back">
+                    ← Back to home
+                </a>
+
+                <div class="auth-heading">
+                    <span class="eyebrow">WELCOME BACK</span>
+                    <h2>Continue your <span>journey.</span></h2>
+                    <p>Sign in to explore your Rajasthan adventure.</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password">Password</label>
+                        </div>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                                minlength="8">
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password">
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-option">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+
+                        <a href="#" id="forgotPassword">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        Sign In <span>↗</span>
+                    </button>
+
+                    <p id="loginMessage" class="auth-message"
+                       role="status" aria-live="polite"></p>
+
+                </form>
+
+                <div class="auth-divider">
+                    <span>YOUR ADVENTURE STARTS HERE</span>
+                </div>
+
+                <p class="auth-switch">
+                    New to RAJPUTANA?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+                <p class="auth-terms">
+                    By continuing, you agree to use RAJPUTANA responsibly.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <a href="../index.html" class="footer-brand">
+                ✦ RAJPUTANA
+            </a>
+
+            <p>
+                पधारो म्हारे देश — Discover the spirit of Rajasthan.
+            </p>
+
+            <p>
+                © 2026 RAJPUTANA. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../JS/main.js"></script>
+    <script src="../JS/auth.js"></script>
+
+</body>
+</html>

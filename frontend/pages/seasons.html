@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seasonal Journeys | RAJPUTANA</title>
+    <meta name="description" content="Explore Rajasthan throughout the year with RAJPUTANA. Discover forts, deserts, lakes, hills and wildlife.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/seasons.css">
+</head>
+
+<body>
+
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <span class="loader-symbol">✦</span>
+        <p>RAJPUTANA</p>
+        <small>Discover the Royal Land</small>
+    </div>
+</div>
+
+<header class="navbar" id="navbar">
+    <a href="../index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+        <span class="brand-text">
+            RAJPUTANA
+            <small>TOURISM & ADVENTURE</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="seasons.html" class="active">Seasons</a>
+        <a href="map.html">Journey Map</a>
+        <a href="about.html">Our Story</a>
+        <a href="login.html" class="nav-cta">Join the Journey ↗</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="seasons-hero">
+        <div class="seasons-hero-image" aria-hidden="true"></div>
+        <div class="seasons-hero-overlay" aria-hidden="true"></div>
+
+        <div class="seasons-hero-content">
+            <span class="eyebrow">FIVE SEASONS · ONE ROYAL LAND</span>
+
+            <h1>
+                Rajasthan,<br>
+                <em>In Every Season.</em>
+            </h1>
+
+            <p>
+                From golden desert sunsets to misty Aravalli hills,
+                discover a different side of Rajasthan throughout the year.
+            </p>
+
+            <a href="#seasonExplorer" class="season-button">
+                FIND YOUR SEASON <span>↓</span>
+            </a>
+        </div>
+
+        <div class="seasons-hero-caption">
+            <span>पधारो म्हारे देश</span>
+            <span>EXPLORE RAJASTHAN · INDIA</span>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="seasons-intro">
+        <div class="season-section-label">
+            <span>01</span> PLAN YOUR NEXT JOURNEY
+        </div>
+
+        <div class="seasons-intro-grid">
+            <h2>
+                Every season has<br>
+                <em>its own magic.</em>
+            </h2>
+
+            <p>
+                Rajasthan's historic cities, golden deserts, beautiful lakes
+                and green hills offer different experiences throughout the
+                year. Choose your preferred season to discover destinations
+                and find inspiration for your next adventure.
+            </p>
+        </div>
+
+        <div class="season-highlights">
+            <div>
+                <strong>05</strong>
+                <span>Seasonal journeys</span>
+            </div>
+            <div>
+                <strong>08</strong>
+                <span>Featured destinations</span>
+            </div>
+            <div>
+                <strong>∞</strong>
+                <span>Memories to discover</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEASON EXPLORER -->
+    <section class="season-explorer" id="seasonExplorer">
+
+        <div class="season-section-label">
+            <span>02</span> EXPLORE BY SEASON
+        </div>
+
+        <div class="season-heading">
+            <div>
+                <h2>Choose your <em>journey.</em></h2>
+                <p>Select a season and explore recommended destinations.</p>
+            </div>
+        </div>
+
+        <div class="season-tabs" role="group" aria-label="Filter by season">
+            <button type="button" class="season-tab active" data-season="all">
+                All Seasons
+            </button>
+            <button type="button" class="season-tab" data-season="winter">
+                ❄ Winter
+            </button>
+            <button type="button" class="season-tab" data-season="summer">
+                ☀ Summer
+            </button>
+            <button type="button" class="season-tab" data-season="monsoon">
+                ☂ Monsoon
+            </button>
+            <button type="button" class="season-tab" data-season="spring">
+                ✿ Spring
+            </button>
+            <button type="button" class="season-tab" data-season="autumn">
+                ✧ Autumn
+            </button>
+        </div>
+
+        <div class="season-cards-grid" id="seasonCards">
+
+            <!-- WINTER -->
+            <article class="season-card" data-season="winter">
+                <a href="places.html?place=jaisalmer"
+                   class="season-card-image winter-image"
+                   aria-label="Explore winter destinations">
+                    <span class="season-number">01</span>
+                    <span class="season-badge">NOVEMBER — FEBRUARY</span>
+                    <span class="season-image-title">The Golden Desert</span>
+                </a>
+
+                <div class="season-card-content">
+                    <span class="season-icon">❄</span>
+                    <h3>Winter <em>Wonders</em></h3>
+                    <p>
+                        Enjoy pleasant days exploring royal forts, desert
+                        landscapes, historic streets and vibrant markets.
+                    </p>
+                    <div class="season-destinations">
+                        <span>Jaisalmer</span>
+                        <span>Jaipur</span>
+                        <span>Jodhpur</span>
+                    </div>
+                    <a href="places.html?place=jaisalmer" class="season-link">
+                        Explore Winter <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- SUMMER -->
+            <article class="season-card" data-season="summer">
+                <a href="places.html?place=mount-abu"
+                   class="season-card-image summer-image"
+                   aria-label="Explore summer destinations">
+                    <span class="season-number">02</span>
+                    <span class="season-badge">MARCH — JUNE</span>
+                    <span class="season-image-title">Escape to the Hills</span>
+                </a>
+
+                <div class="season-card-content">
+                    <span class="season-icon">☀</span>
+                    <h3>Summer <em>Escapes</em></h3>
+                    <p>
+                        Discover hill-country views, peaceful lakes and
+                        shaded heritage sites. Plan outdoor visits carefully
+                        during hot weather.
+                    </p>
+                    <div class="season-destinations">
+                        <span>Mount Abu</span>
+                        <span>Udaipur</span>
+                        <span>Kumbhalgarh</span>
+                    </div>
+                    <a href="places.html?place=mount-abu" class="season-link">
+                        Find a Cool Escape <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- MONSOON -->
+            <article class="season-card" data-season="monsoon">
+                <a href="places.html?place=udaipur"
+                   class="season-card-image monsoon-image"
+                   aria-label="Explore monsoon destinations">
+                    <span class="season-number">03</span>
+                    <span class="season-badge">JULY — SEPTEMBER</span>
+                    <span class="season-image-title">Lakes & Green Hills</span>
+                </a>
+
+                <div class="season-card-content">
+                    <span class="season-icon">☂</span>
+                    <h3>Monsoon <em>Magic</em></h3>
+                    <p>
+                        Explore refreshed landscapes, scenic lakes and
+                        greener hills around Rajasthan's Aravalli region.
+                    </p>
+                    <div class="season-destinations">
+                        <span>Udaipur</span>
+                        <span>Mount Abu</span>
+                        <span>Pushkar</span>
+                    </div>
+                    <a href="places.html?place=udaipur" class="season-link">
+                        Discover Monsoon <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- SPRING -->
+            <article class="season-card" data-season="spring">
+                <a href="places.html?place=jaipur"
+                   class="season-card-image spring-image"
+                   aria-label="Explore spring destinations">
+                    <span class="season-number">04</span>
+                    <span class="season-badge">FEBRUARY — MARCH</span>
+                    <span class="season-image-title">Colourful Heritage</span>
+                </a>
+
+                <div class="season-card-content">
+                    <span class="season-icon">✿</span>
+                    <h3>Spring <em>Adventures</em></h3>
+                    <p>
+                        Enjoy cultural discoveries, traditional markets,
+                        historic landmarks and outdoor exploration.
+                    </p>
+                    <div class="season-destinations">
+                        <span>Jaipur</span>
+                        <span>Pushkar</span>
+                        <span>Chittorgarh</span>
+                    </div>
+                    <a href="places.html?place=jaipur" class="season-link">
+                        Start a Spring Journey <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- AUTUMN -->
+            <article class="season-card" data-season="autumn">
+                <a href="places.html?place=ranthambore"
+                   class="season-card-image autumn-image"
+                   aria-label="Explore autumn destinations">
+                    <span class="season-number">05</span>
+                    <span class="season-badge">OCTOBER — NOVEMBER</span>
+                    <span class="season-image-title">Wild & Royal</span>
+                </a>
+
+                <div class="season-card-content">
+                    <span class="season-icon">✧</span>
+                    <h3>Autumn <em>Journeys</em></h3>
+                    <p>
+                        Discover wildlife, traditional markets and historic
+                        landmarks as the weather begins to change.
+                    </p>
+                    <div class="season-destinations">
+                        <span>Ranthambore</span>
+                        <span>Jaipur</span>
+                        <span>Jodhpur</span>
+                    </div>
+                    <a href="places.html?place=ranthambore" class="season-link">
+                        Explore Autumn <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="season-empty" id="seasonEmpty" hidden>
+            <h3>No season found.</h3>
+            <p>Choose another season to continue exploring.</p>
+        </div>
+
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="season-planner">
+        <div class="season-planner-content">
+            <span class="eyebrow">YOUR ADVENTURE STARTS HERE</span>
+
+            <h2>
+                Rajasthan is waiting.<br>
+                <em>What's your story?</em>
+            </h2>
+
+            <p>
+                Explore destinations, discover royal heritage and create
+                unforgettable memories across Rajasthan.
+            </p>
+
+            <a href="explore.html" class="season-button">
+                EXPLORE ALL DESTINATIONS <span>↗</span>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <a href="../index.html" class="brand footer-brand">
+            <span class="brand-symbol">✦</span>
+            <span class="brand-text">
+                RAJPUTANA
+                <small>TOURISM & ADVENTURE</small>
+            </span>
+        </a>
+
+        <p>
+            पधारो म्हारे देश<br>
+            Discover the heritage, culture and adventures of Rajasthan.
+        </p>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 RAJPUTANA. All rights reserved.</span>
+        <span>MADE WITH PRIDE IN RAJASTHAN, INDIA</span>
+    </div>
+</footer>
+
+<script src="../JS/main.js"></script>
+<script src="../JS/seasons.js"></script>
+
+</body>
+</html>

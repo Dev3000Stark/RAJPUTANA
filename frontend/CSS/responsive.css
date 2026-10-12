@@ -1,0 +1,497 @@
+/* TABLETS AND SMALL LAPTOPS */
+
+@media (max-width: 1100px) {
+
+
+.navbar {
+    padding: 0 5%;
+    gap: 20px;
+}
+
+.nav-links {
+    gap: 17px;
+}
+
+.nav-link {
+    font-size: 10px;
+}
+
+.brand-text strong {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.brand-text small {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+.section-padding {
+    padding: 85px 6%;
+}
+
+.destination-grid {
+    grid-template-rows: 250px 250px;
+}
+
+.season-content {
+    padding: 75px 8%;
+}
+
+.journey-section {
+    padding: 85px 7%;
+    grid-template-columns: 1fr 350px;
+    gap: 55px;
+}
+
+.about-section {
+    gap: 55px;
+}
+
+
+}
+
+/* TABLETS */
+
+@media (max-width: 850px) {
+
+.navbar {
+    min-height: 80px;
+}
+
+.navbar.scrolled {
+    min-height: 70px;
+}
+
+.menu-toggle {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid rgba(228, 201, 142, 0.6);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 102;
+}
+
+.menu-toggle span {
+    width: 18px;
+    height: 1px;
+    background: white;
+    transition: transform 0.25s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(360px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    padding: 115px 35px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    background: #17130f;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.2);
+    transition: right 0.35s ease;
+    z-index: 101;
+}
+
+.nav-links.open {
+    right: 0;
+}
+
+.nav-link {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+}
+
+.nav-login {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.hero {
+    min-height: 700px;
+    height: 90svh;
+}
+
+.hero-content {
+    margin-left: 7%;
+    width: 86%;
+}
+
+.hero h1 {
+    font-size: clamp(62px, 10vw, 88px);
+}
+
+.hero-side-label {
+    right: 14px;
+}
+
+.heritage-strip {
+    padding: 30px 6%;
+    gap: 18px;
+}
+
+.heritage-item {
+    gap: 10px;
+}
+
+.heritage-icon {
+    font-size: 23px;
+}
+
+.heritage-item strong {
+    font-size: 15px;
+}
+
+.heritage-item small {
+    font-size: 9px;
+}
+
+.section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-heading-right {
+    max-width: 450px;
+}
+
+.destination-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px 260px 260px;
+}
+
+.destination-large {
+    grid-column: 1 / -1;
+    grid-row: auto;
+}
+
+.season-section {
+    grid-template-columns: 1fr;
+}
+
+.season-image {
+    min-height: 440px;
+}
+
+.season-content {
+    padding: 70px 8%;
+}
+
+.journey-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 80px 8%;
+}
+
+.journey-preview {
+    width: min(100%, 430px);
+    margin: 0 auto;
+}
+
+.about-section {
+    gap: 45px;
+}
+
+.about-mark {
+    width: 145px;
+    height: 145px;
+    font-size: 95px;
+}
+
+
+}
+/* MOBILE PHONES */
+
+@media (max-width: 560px) {
+
+
+.navbar {
+    padding: 0 5%;
+    min-height: 76px;
+}
+
+.navbar.scrolled {
+    min-height: 68px;
+}
+
+.brand {
+    gap: 9px;
+}
+
+.brand-symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+}
+
+.brand-text strong {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.brand-text small {
+    font-size: 6px;
+    letter-spacing: 1.1px;
+}
+
+.hero {
+    min-height: 690px;
+    height: 94svh;
+    max-height: 850px;
+}
+
+.hero-background {
+    background-position: 57% center;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(16, 13, 10, 0.82),
+        rgba(16, 13, 10, 0.42)
+    ),
+    linear-gradient(
+        0deg,
+        rgba(16, 13, 10, 0.52),
+        transparent 60%
+    );
+}
+
+.hero-content {
+    margin-left: 6%;
+    width: 88%;
+    padding-top: 35px;
+}
+
+.hero-eyebrow {
+    gap: 9px;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    margin-bottom: 24px;
+}
+
+.eyebrow-line {
+    width: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(53px, 12vw, 72px);
+    letter-spacing: -1px;
+    line-height: 0.99;
+}
+
+.hero-description {
+    max-width: 340px;
+    margin-top: 23px;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: min(100%, 280px);
+    gap: 11px;
+    margin-top: 27px;
+}
+
+.button {
+    min-height: 50px;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+.hero-location {
+    margin-top: 36px;
+}
+
+.hero-side-label {
+    display: none;
+}
+
+.scroll-indicator {
+    left: 6%;
+    bottom: 22px;
+    font-size: 7px;
+}
+
+.scroll-line {
+    width: 24px;
+}
+
+.hero-counter {
+    right: 6%;
+    bottom: 18px;
+    gap: 7px;
+}
+
+.hero-counter strong {
+    font-size: 20px;
+}
+
+.hero-counter > span {
+    width: 20px;
+}
+
+.hero-counter small {
+    font-size: 7px;
+}
+
+.heritage-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 7%;
+}
+
+.heritage-divider {
+    display: none;
+}
+
+.heritage-item strong {
+    font-size: 17px;
+}
+
+.section-padding {
+    padding: 72px 6%;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.season-content h2,
+.journey-content h2,
+.about-copy h2 {
+    font-size: 49px;
+}
+
+.section-heading-right p {
+    font-size: 11px;
+}
+
+.destination-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 340px);
+    gap: 13px;
+}
+
+.destination-large {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.destination-info h3 {
+    font-size: 39px;
+}
+
+.destination-info p {
+    font-size: 11px;
+}
+
+.season-image {
+    min-height: 340px;
+}
+
+.season-image-caption strong {
+    font-size: 29px;
+}
+
+.season-content {
+    padding: 65px 6%;
+}
+
+.season-content > p {
+    font-size: 11px;
+}
+
+.season-item {
+    min-height: 80px;
+    gap: 11px;
+}
+
+.season-item small {
+    font-size: 8px;
+}
+
+.journey-section {
+    padding: 70px 6%;
+    gap: 38px;
+}
+
+.journey-content > p {
+    font-size: 11px;
+}
+
+.journey-preview {
+    padding: 22px;
+}
+
+.xp-footer {
+    font-size: 7px;
+}
+
+.about-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+}
+
+.about-mark {
+    width: 110px;
+    height: 110px;
+    font-size: 72px;
+    outline-offset: 8px;
+}
+
+.about-copy > p {
+    font-size: 11px;
+}
+
+.footer {
+    padding: 45px 6% 0;
+}
+
+.footer-main {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 23px;
+    padding-bottom: 32px;
+}
+
+.footer-main > p {
+    font-size: 19px;
+}
+
+.footer-bottom {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+    font-size: 7px;
+}
+
+
+}

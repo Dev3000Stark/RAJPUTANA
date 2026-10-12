@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#24211c">
+
+    <title>My Journey | RAJPUTANA</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+            <span class="logo-symbol">✦</span>
+            <span class="logo-text">
+                RAJPUTANA
+                <small>TOURISM & ADVENTURE</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="seasons.html">Seasons</a>
+            <a href="map.html">Journey Map</a>
+            <a href="about.html">Our Story</a>
+            <a href="#" id="logoutButton" class="nav-cta">Sign Out ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="profile-page">
+
+    <section class="profile-hero">
+
+        <div class="profile-hero-content">
+
+            <span class="eyebrow">YOUR PERSONAL TRAVEL SPACE</span>
+
+            <h1>
+                Your journey,
+                <span>your legacy.</span>
+            </h1>
+
+            <p>
+                Every fort explored, every destination discovered
+                and every adventure completed becomes part of your story.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="profile-content">
+
+        <div class="profile-welcome">
+
+            <div class="profile-avatar" id="profileAvatar">T</div>
+
+            <div class="profile-user-details">
+                <span class="eyebrow">WELCOME, TRAVELLER</span>
+                <h2 id="profileName">Traveller</h2>
+                <p id="profileEmail">Your travel adventure awaits.</p>
+            </div>
+
+            <div class="profile-rank">
+                <span>YOUR CURRENT RANK</span>
+                <strong data-game-title>Desert Explorer</strong>
+                <small>Level <span data-game-level>1</span></small>
+            </div>
+
+        </div>
+
+        <div class="profile-stats">
+
+            <article class="profile-stat-card">
+                <span class="stat-icon">✦</span>
+                <p>Total Journey XP</p>
+                <h3><span data-game-xp>0</span></h3>
+                <small>Points earned exploring</small>
+            </article>
+
+            <article class="profile-stat-card">
+                <span class="stat-icon">⌖</span>
+                <p>Destinations Visited</p>
+                <h3><span data-game-visited>0</span><span>/8</span></h3>
+                <small>Places added to your journey</small>
+            </article>
+
+            <article class="profile-stat-card">
+                <span class="stat-icon">♛</span>
+                <p>Current Level</p>
+                <h3><span data-game-level>1</span></h3>
+                <small data-game-title>Desert Explorer</small>
+            </article>
+
+        </div>
+
+        <section class="profile-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="eyebrow">YOUR NEXT MILESTONE</span>
+                    <h2>Journey progression</h2>
+                </div>
+
+                <span class="progress-badge">
+                    Level <span data-game-level>1</span>
+                </span>
+            </div>
+
+            <div class="progress-info">
+                <span data-game-title>Desert Explorer</span>
+                <span id="nextLevelText">300 XP to Level 2</span>
+            </div>
+
+            <div class="progress-track">
+                <div
+                    class="progress-fill"
+                    id="profileProgress"
+                    data-game-progress
+                    role="progressbar"
+                    aria-label="Progress to next level"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0">
+                </div>
+            </div>
+
+            <p class="progress-caption" id="progressCaption">
+                Visit destinations to earn 100 XP each.
+            </p>
+
+        </section>
+
+        <section class="profile-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="eyebrow">YOUR RAJASTHAN STORY</span>
+                    <h2>Destinations discovered</h2>
+                </div>
+
+                <a href="map.html" class="profile-link">
+                    Open Journey Map ↗
+                </a>
+            </div>
+
+            <div class="visited-grid" id="visitedDestinations">
+
+                <article class="visited-empty">
+                    <span>✧</span>
+                    <h3>Your journey starts here.</h3>
+                    <p>
+                        Visit a destination on the Journey Map
+                        to begin collecting XP and building your travel history.
+                    </p>
+                    <a href="map.html" class="profile-primary-button">
+                        Start Exploring ↗
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="profile-cta">
+
+            <div>
+                <span class="eyebrow">THE LAND OF KINGS IS WAITING</span>
+                <h2>There's more to discover.</h2>
+                <p>Explore Rajasthan's remarkable places and traditions.</p>
+            </div>
+
+            <a href="explore.html" class="profile-primary-button">
+                Explore Destinations ↗
+            </a>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-bottom">
+        <a href="../index.html" class="footer-brand">✦ RAJPUTANA</a>
+        <p>पधारो म्हारे देश — Discover the spirit of Rajasthan.</p>
+        <p>© 2026 RAJPUTANA. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="../JS/main.js"></script>
+<script src="../JS/game.js"></script>
+<script src="../JS/profile.js"></script>
+
+</body>
+</html>

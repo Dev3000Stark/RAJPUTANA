@@ -1,0 +1,34 @@
+/* REGISTRATION PAGE */
+
+.register-terms {
+    align-items: flex-start;
+    margin: 8px 0 24px;
+    line-height: 1.7;
+}
+
+.register-terms input {
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.register-terms span {
+    font-size: 12px;
+}
+
+#registerForm .form-group {
+    margin-bottom: 18px;
+}
+
+#registerForm .auth-submit {
+    margin-top: 5px;
+}
+
+@media (min-width: 901px) {
+    #registerForm .form-group {
+        margin-bottom: 15px;
+    }
+
+    #registerForm .form-group input:not([type="checkbox"]) {
+        min-height: 46px;
+    }
+}

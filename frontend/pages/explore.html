@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Rajasthan | RAJPUTANA</title>
+
+    <meta name="description"
+          content="Discover Rajasthan's magnificent forts, royal palaces,
+          golden deserts, lakes and historic landmarks with RAJPUTANA.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/explore.css">
+</head>
+
+<body>
+
+<!-- ================= PAGE LOADER ================= -->
+
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <span class="loader-symbol">✦</span>
+        <p>RAJPUTANA</p>
+        <small>Discover the Royal Land</small>
+    </div>
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar" id="navbar">
+
+    <a href="../index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+
+        <span class="brand-text">
+            RAJPUTANA
+            <small>TOURISM & ADVENTURE</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+            aria-expanded="false">
+        ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="explore.html" class="active">Explore</a>
+        <a href="seasons.html">Seasons</a>
+        <a href="map.html">Journey Map</a>
+        <a href="about.html">Our Story</a>
+        <a href="login.html" class="nav-cta">Join the Journey ↗</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="explore-hero">
+
+        <div class="explore-hero-overlay"></div>
+
+        <div class="explore-hero-content">
+
+            <span class="eyebrow">
+                THE LAND OF ROYAL LEGENDS
+            </span>
+
+            <h1>
+                Every City Has<br>
+                <em>A Story to Tell.</em>
+            </h1>
+
+            <p>
+                Walk through ancient forts, discover hidden havelis,
+                watch the desert glow at sunset and experience
+                Rajasthan beyond the ordinary.
+            </p>
+
+            <a href="#destinations" class="btn btn-primary">
+                Discover Destinations <span>↓</span>
+            </a>
+
+        </div>
+
+        <div class="hero-bottom-label">
+            <span>RAJASTHAN, INDIA</span>
+            <span>26°55′ N — 75°49′ E</span>
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="explore-intro">
+
+        <div class="section-label">
+            <span>01</span>
+            <span>YOUR NEXT ADVENTURE</span>
+        </div>
+
+        <div class="explore-intro-content">
+
+            <h2>
+                Eight Destinations.<br>
+                <em>Countless Memories.</em>
+            </h2>
+
+            <p>
+                Rajasthan is more than a destination.
+                It is a journey through royal history, colourful
+                traditions, breathtaking landscapes and timeless
+                architecture.
+            </p>
+
+        </div>
+
+        <div class="explore-stats">
+
+            <div class="explore-stat">
+                <strong>08</strong>
+                <span>Destinations</span>
+            </div>
+
+            <div class="explore-stat">
+                <strong>32</strong>
+                <span>Featured Attractions</span>
+            </div>
+
+            <div class="explore-stat">
+                <strong>01</strong>
+                <span>Unforgettable Journey</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DESTINATIONS ================= -->
+
+    <section class="explore-section" id="destinations">
+
+        <div class="explore-section-heading">
+
+            <div>
+                <span class="eyebrow">FIND YOUR EXPERIENCE</span>
+
+                <h2>
+                    Explore the <em>Royal Map</em>
+                </h2>
+            </div>
+
+            <p>
+                Choose a destination and discover four remarkable
+                attractions waiting to be explored.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="explore-controls">
+
+            <div class="destination-search">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="destinationSearch"
+                    placeholder="Search cities, forts, palaces..."
+                    aria-label="Search destinations and attractions">
+
+            </div>
+
+            <div class="destination-count">
+                SHOWING <strong id="resultsCount">8</strong> DESTINATIONS
+            </div>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="explore-filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All Destinations
+            </button>
+
+            <button class="filter-btn" data-filter="heritage">
+                Royal Heritage
+            </button>
+
+            <button class="filter-btn" data-filter="desert">
+                Desert Escape
+            </button>
+
+            <button class="filter-btn" data-filter="nature">
+                Lakes & Nature
+            </button>
+
+            <button class="filter-btn" data-filter="adventure">
+                Wildlife & Adventure
+            </button>
+
+        </div>
+
+
+        <!-- DESTINATION CARDS -->
+
+        <div class="explore-grid" id="destinationGrid">
+
+
+            <!-- ===================================
+                 1. JAIPUR
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Jaipur Pink City Hawa Mahal Amber Fort Jal Mahal Jantar Mantar"
+                     data-category="heritage">
+
+                <a href="places.html?place=jaipur"
+                   class="destination-image-link"
+                   aria-label="Explore Jaipur">
+
+                    <div class="destination-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=1000&q=85"
+                            alt="Royal architecture in Jaipur"
+                            loading="lazy">
+
+                        <span class="destination-number">01</span>
+                        <span class="destination-tag">ROYAL HERITAGE</span>
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · NORTH INDIA
+                    </div>
+
+                    <h3>Jaipur</h3>
+
+                    <p class="destination-subtitle">
+                        The Pink City
+                    </p>
+
+                    <p class="destination-description">
+                        Discover rose-coloured streets, grand forts,
+                        royal courtyards and architectural wonders
+                        from Rajasthan's royal past.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Hawa Mahal</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Amber Fort</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Jal Mahal</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Jantar Mantar</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=jaipur"
+                       class="destination-link">
+                        Explore Jaipur <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 2. JAISALMER
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Jaisalmer Golden City Jaisalmer Fort Sonar Qila Sam Sand Dunes Patwon Ki Haveli Gadisar Lake"
+                     data-category="desert heritage">
+
+                <a href="places.html?place=jaisalmer"
+                   class="destination-image-link"
+                   aria-label="Explore Jaisalmer">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1602643163983-ed0babc39797?auto=format&fit=crop&w=1000&q=85"
+                            alt="Golden sandstone architecture in the desert"
+                            loading="lazy">
+
+                        <span class="destination-number">02</span>
+                        <span class="destination-tag">DESERT ESCAPE</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · THAR DESERT
+                    </div>
+
+                    <h3>Jaisalmer</h3>
+
+                    <p class="destination-subtitle">
+                        The Golden City
+                    </p>
+
+                    <p class="destination-description">
+                        Experience golden sandstone architecture,
+                        living fort streets, carved havelis and
+                        spectacular desert sunsets.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Jaisalmer Fort</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Sam Sand Dunes</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Patwon Ki Haveli</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Gadisar Lake</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=jaisalmer"
+                       class="destination-link">
+                        Explore Jaisalmer <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 3. UDAIPUR
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Udaipur City of Lakes City Palace Lake Pichola Fateh Sagar Lake Sajjangarh Monsoon Palace"
+                     data-category="heritage nature">
+
+                <a href="places.html?place=udaipur"
+                   class="destination-image-link"
+                   aria-label="Explore Udaipur">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1000&q=85"
+                            alt="Lake and palace scenery in Udaipur"
+                            loading="lazy">
+
+                        <span class="destination-number">03</span>
+                        <span class="destination-tag">LAKES & PALACES</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · MEWAR REGION
+                    </div>
+
+                    <h3>Udaipur</h3>
+
+                    <p class="destination-subtitle">
+                        The City of Lakes
+                    </p>
+
+                    <p class="destination-description">
+                        Admire lakeside palaces, romantic sunsets,
+                        scenic waterfronts and the beauty of
+                        the Aravalli hills.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>City Palace</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Lake Pichola</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Fateh Sagar Lake</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Sajjangarh Palace</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=udaipur"
+                       class="destination-link">
+                        Explore Udaipur <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 4. JODHPUR
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Jodhpur Blue City Mehrangarh Fort Umaid Bhawan Palace Jaswant Thada Mandore Gardens"
+                     data-category="heritage">
+
+                <a href="places.html?place=jodhpur"
+                   class="destination-image-link"
+                   aria-label="Explore Jodhpur">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1624806992066-5ffcf7ca186b?auto=format&fit=crop&w=1000&q=85"
+                            alt="Historic architecture in Jodhpur"
+                            loading="lazy">
+
+                        <span class="destination-number">04</span>
+                        <span class="destination-tag">ROYAL HERITAGE</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · MARWAR REGION
+                    </div>
+
+                    <h3>Jodhpur</h3>
+
+                    <p class="destination-subtitle">
+                        The Blue City
+                    </p>
+
+                    <p class="destination-description">
+                        Wander through blue-painted lanes, towering
+                        fortresses, elegant palaces and memorials
+                        filled with stories of Marwar.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Mehrangarh Fort</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Umaid Bhawan Palace</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Jaswant Thada</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Mandore Gardens</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=jodhpur"
+                       class="destination-link">
+                        Explore Jodhpur <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 5. MOUNT ABU
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Mount Abu Hill Station Nakki Lake Dilwara Temples Guru Shikhar Sunset Point"
+                     data-category="nature adventure">
+
+                <a href="places.html?place=mount-abu"
+                   class="destination-image-link"
+                   aria-label="Explore Mount Abu">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+                            alt="Green mountain landscape"
+                            loading="lazy">
+
+                        <span class="destination-number">05</span>
+                        <span class="destination-tag">NATURE ESCAPE</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · ARAVALLI HILLS
+                    </div>
+
+                    <h3>Mount Abu</h3>
+
+                    <p class="destination-subtitle">
+                        Rajasthan's Hill Station
+                    </p>
+
+                    <p class="destination-description">
+                        Find peaceful lakes, cool mountain air,
+                        intricate temple carvings and panoramic
+                        views across the Aravalli hills.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Nakki Lake</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Dilwara Temples</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Guru Shikhar</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Sunset Point</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=mount-abu"
+                       class="destination-link">
+                        Explore Mount Abu <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 6. PUSHKAR
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Pushkar Brahma Temple Pushkar Lake Savitri Temple Pushkar Ghats"
+                     data-category="heritage nature">
+
+                <a href="places.html?place=pushkar"
+                   class="destination-image-link"
+                   aria-label="Explore Pushkar">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1000&q=85"
+                            alt="Traditional Indian temple architecture"
+                            loading="lazy">
+
+                        <span class="destination-number">06</span>
+                        <span class="destination-tag">SPIRITUAL JOURNEY</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · AJMER REGION
+                    </div>
+
+                    <h3>Pushkar</h3>
+
+                    <p class="destination-subtitle">
+                        The Sacred Town
+                    </p>
+
+                    <p class="destination-description">
+                        Discover sacred temples, peaceful ghats,
+                        desert-edge hills and a vibrant cultural
+                        atmosphere.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Brahma Temple</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Pushkar Lake</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Savitri Temple</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Pushkar Ghats</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=pushkar"
+                       class="destination-link">
+                        Explore Pushkar <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 7. CHITTORGARH
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Chittorgarh Chittorgarh Fort Vijay Stambh Kirti Stambh Rana Kumbha Palace"
+                     data-category="heritage">
+
+                <a href="places.html?place=chittorgarh"
+                   class="destination-image-link"
+                   aria-label="Explore Chittorgarh">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1000&q=85"
+                            alt="Historic Indian fort architecture"
+                            loading="lazy">
+
+                        <span class="destination-number">07</span>
+                        <span class="destination-tag">HISTORIC KINGDOM</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · MEWAR REGION
+                    </div>
+
+                    <h3>Chittorgarh</h3>
+
+                    <p class="destination-subtitle">
+                        The Land of Legends
+                    </p>
+
+                    <p class="destination-description">
+                        Explore a legendary hill fort, monumental
+                        victory towers and palaces connected with
+                        the history of Mewar.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Chittorgarh Fort</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Vijay Stambh</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Kirti Stambh</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Rana Kumbha Palace</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=chittorgarh"
+                       class="destination-link">
+                        Explore Chittorgarh <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===================================
+                 8. RANTHAMBORE
+            ==================================== -->
+
+            <article class="destination-card"
+                     data-name="Ranthambore National Park Tiger Safari Ranthambore Fort Padam Talao Wildlife"
+                     data-category="adventure nature">
+
+                <a href="places.html?place=ranthambore"
+                   class="destination-image-link"
+                   aria-label="Explore Ranthambore">
+
+                    <div class="destination-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=85"
+                            alt="Wildlife in its natural habitat"
+                            loading="lazy">
+
+                        <span class="destination-number">08</span>
+                        <span class="destination-tag">WILDLIFE ADVENTURE</span>
+
+                    </div>
+
+                </a>
+
+                <div class="destination-info">
+
+                    <div class="destination-location">
+                        RAJASTHAN · SAWAI MADHOPUR
+                    </div>
+
+                    <h3>Ranthambore</h3>
+
+                    <p class="destination-subtitle">
+                        The Wild Side of Rajasthan
+                    </p>
+
+                    <p class="destination-description">
+                        Experience wildlife, forest landscapes,
+                        ancient ruins and the thrill of exploring
+                        one of Rajasthan's famous tiger reserves.
+                    </p>
+
+                    <div class="attractions-list">
+
+                        <span class="attractions-heading">
+                            PLACES TO DISCOVER
+                        </span>
+
+                        <div class="attraction-item">
+                            <span>01</span>
+                            <span>Ranthambore National Park</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>02</span>
+                            <span>Ranthambore Fort</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>03</span>
+                            <span>Padam Talao</span>
+                        </div>
+
+                        <div class="attraction-item">
+                            <span>04</span>
+                            <span>Jogi Mahal Area</span>
+                        </div>
+
+                    </div>
+
+                    <a href="places.html?place=ranthambore"
+                       class="destination-link">
+                        Explore Ranthambore <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- EMPTY SEARCH RESULTS -->
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+
+            <span class="empty-state-icon">⌕</span>
+
+            <h3>No destinations found</h3>
+
+            <p>
+                Try searching for another city, fort, palace or attraction.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CLOSING CTA ================= -->
+
+    <section class="explore-cta">
+
+        <div class="explore-cta-content">
+
+            <span class="eyebrow">YOUR STORY STARTS HERE</span>
+
+            <h2>
+                The Kingdom Is Waiting.<br>
+                <em>Will You Answer the Call?</em>
+            </h2>
+
+            <p>
+                Choose your destination, plan your journey
+                and earn Journey XP as you discover Rajasthan.
+            </p>
+
+            <a href="map.html" class="btn btn-primary">
+                Begin Your Journey <span>↗</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <a href="../index.html" class="brand footer-brand">
+
+            <span class="brand-symbol">✦</span>
+
+            <span class="brand-text">
+                RAJPUTANA
+                <small>TOURISM & ADVENTURE</small>
+            </span>
+
+        </a>
+
+        <p>
+            पधारो म्हारे देश
+            <br>
+            Discover the heritage, culture and adventures of Rajasthan.
+        </p>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>© 2026 RAJPUTANA. All rights reserved.</span>
+
+        <span>MADE WITH PRIDE IN RAJASTHAN, INDIA</span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="../JS/main.js"></script>
+<script src="../JS/explore.js"></script>
+
+</body>
+</html>

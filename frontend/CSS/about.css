@@ -1,0 +1,570 @@
+/* ==========================================
+   RAJPUTANA - ABOUT PAGE
+   ========================================== */
+
+.about-hero {
+    min-height: 610px;
+    height: 78vh;
+    max-height: 820px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    background:
+        linear-gradient(90deg, rgba(15, 15, 13, 0.88), rgba(15, 15, 13, 0.20)),
+        url("https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=2000&q=85")
+        center 45% / cover no-repeat;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(15, 15, 13, 0.55),
+        transparent 55%
+    );
+}
+
+.about-hero-content {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #c8a76b;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+.about-hero h1 {
+    margin: 24px 0;
+    max-width: 850px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(45px, 6.5vw, 86px);
+    font-weight: 600;
+    line-height: 0.99;
+    letter-spacing: -1.5px;
+}
+
+.about-hero h1 span {
+    color: #d8b979;
+    font-style: italic;
+}
+
+.about-hero-content > p {
+    max-width: 550px;
+    margin: 0 0 30px;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.about-primary-btn,
+.about-secondary-btn,
+.about-outline-btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 13px 23px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: 0.25s ease;
+}
+
+.about-primary-btn {
+    color: #211b12;
+    background: #d5b475;
+    border: 1px solid #d5b475;
+}
+
+.about-primary-btn:hover {
+    color: #fff;
+    background: #9b763c;
+    border-color: #9b763c;
+    transform: translateY(-2px);
+}
+
+.about-primary-btn span,
+.about-outline-btn span {
+    font-size: 17px;
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 28px;
+    left: 6%;
+    right: 6%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* SHARED SPACING */
+
+.section-padding {
+    padding: 100px max(6%, calc((100% - 1150px) / 2));
+}
+
+/* INTRODUCTION */
+
+.about-intro {
+    background: #f7f3eb;
+}
+
+.about-intro-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    color: #8e6c36;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.gold-line {
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background: #b89557;
+}
+
+.about-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.about-intro h2,
+.mission-heading h2,
+.features-heading h2,
+.about-cta h2 {
+    margin: 0;
+    color: #27231d;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.about-intro h2 em,
+.about-cta h2 em {
+    color: #a67d3d;
+    font-weight: 500;
+}
+
+.about-intro-text p {
+    margin: 0 0 17px;
+    color: #6e685e;
+    font-size: 13px;
+    line-height: 1.95;
+}
+
+.about-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* MISSION */
+
+.mission-section {
+    background: #fffdf8;
+}
+
+.mission-heading,
+.features-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.mission-heading h2,
+.features-heading h2 {
+    margin-top: 14px;
+}
+
+.mission-heading > p,
+.features-heading > p {
+    margin-top: 15px;
+    color: #777064;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.mission-card {
+    padding: 34px 27px;
+    border: 1px solid #e8e0d2;
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(49, 38, 19, 0.08);
+}
+
+.mission-card.featured-mission {
+    background: #28241e;
+    border-color: #28241e;
+}
+
+.mission-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 28px;
+    color: #8b682f;
+    background: #f4ead6;
+    font-size: 24px;
+}
+
+.card-number {
+    color: #a27b3d;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+}
+
+.mission-card h3 {
+    margin: 18px 0 13px;
+    color: #2b2720;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 27px;
+    line-height: 1.15;
+}
+
+.mission-card p {
+    margin: 0;
+    color: #777064;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.featured-mission h3 {
+    color: #fff9ed;
+}
+
+.featured-mission p {
+    color: #c5bcae;
+}
+
+/* FEATURES */
+
+.features-section {
+    background: #f4efe5;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 55px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-top: 1px solid #ded4c3;
+}
+
+.feature-number {
+    flex: 0 0 44px;
+    color: #b08b4c;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
+}
+
+.feature-item h3 {
+    margin: 3px 0 10px;
+    color: #30291f;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 25px;
+}
+
+.feature-item p {
+    margin: 0;
+    color: #777064;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* HERITAGE QUOTE */
+
+.heritage-quote {
+    min-height: 390px;
+    display: grid;
+    place-items: center;
+    padding: 75px 20px;
+    text-align: center;
+    color: #fff;
+    background:
+        linear-gradient(rgba(25, 20, 14, 0.78), rgba(25, 20, 14, 0.82)),
+        url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+.heritage-quote-content {
+    max-width: 700px;
+}
+
+.quote-mark {
+    display: block;
+    height: 58px;
+    color: #d5b475;
+    font-family: Georgia, serif;
+    font-size: 90px;
+    line-height: 1;
+}
+
+.heritage-quote h2 {
+    margin: 15px 0;
+    color: #e4c98f;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 600;
+}
+
+.heritage-quote p {
+    margin: 0 0 27px;
+    color: #e6dfd4;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.about-outline-btn {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.about-outline-btn:hover {
+    color: #211b12;
+    background: #d5b475;
+    border-color: #d5b475;
+}
+
+/* CTA */
+
+.about-cta {
+    background: #fffdf8;
+}
+
+.about-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-cta h2 {
+    margin-top: 17px;
+    font-size: clamp(43px, 5vw, 65px);
+}
+
+.about-cta-content > p {
+    max-width: 500px;
+    margin: 22px auto 28px;
+    color: #777064;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.about-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.about-secondary-btn {
+    color: #42382a;
+    border: 1px solid #cfc2ad;
+}
+
+.about-secondary-btn:hover {
+    color: #fff;
+    background: #28241e;
+    border-color: #28241e;
+}
+
+/* FOOTER */
+
+.about-footer {
+    padding: 48px 6% 22px;
+    text-align: center;
+    color: #d2c9b9;
+    background: #211f1b;
+}
+
+.footer-brand {
+    color: #d5b475;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.about-footer > p {
+    margin: 9px 0 25px;
+    color: #a9a092;
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 23px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #d2c9b9;
+    font-size: 11px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #d5b475;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #938b7e;
+    font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mission-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .section-padding {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        min-height: 590px;
+        height: 78vh;
+        background-position: 55% center;
+    }
+
+    .about-hero-content {
+        width: 88%;
+        padding: 50px 0;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(43px, 12vw, 62px);
+    }
+
+    .about-hero-content > p {
+        font-size: 13px;
+    }
+
+    .hero-caption {
+        bottom: 20px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .section-padding {
+        padding: 62px 7%;
+    }
+
+    .about-intro h2,
+    .mission-heading h2,
+    .features-heading h2 {
+        font-size: 38px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mission-card:last-child {
+        grid-column: auto;
+    }
+
+    .mission-card {
+        padding: 27px 23px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        gap: 15px;
+    }
+
+    .feature-item h3 {
+        font-size: 23px;
+    }
+
+    .heritage-quote {
+        min-height: 330px;
+    }
+
+    .about-cta h2 {
+        font-size: 46px;
+    }
+
+    .about-cta-buttons {
+        flex-direction: column;
+    }
+
+    .about-cta-buttons a {
+        width: 100%;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        line-height: 1.7;
+    }
+}

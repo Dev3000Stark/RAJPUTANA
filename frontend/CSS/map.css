@@ -1,0 +1,630 @@
+/* ==========================================
+   RAJPUTANA — Interactive Journey Map
+   File: frontend/CSS/map.css
+========================================== */
+
+.map-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 6%;
+    background:
+        radial-gradient(circle at 85% 30%, rgba(201,166,107,.14), transparent 35%),
+        #191712;
+    border-bottom: 1px solid var(--line);
+}
+
+.map-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(1240px, 100%);
+    margin: auto;
+}
+
+.map-hero h1 {
+    margin-top: 22px;
+    font-size: clamp(55px, 8vw, 100px);
+}
+
+.map-hero-content > p {
+    max-width: 560px;
+    margin: 22px 0 30px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.map-hero-mark {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    color: rgba(201,166,107,.06);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(200px, 35vw, 430px);
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* DASHBOARD */
+
+.journey-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.journey-stat {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 28px 8%;
+    background: var(--bg);
+}
+
+.journey-stat-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    border: 1px solid var(--line);
+    color: var(--gold-light);
+    font-size: 19px;
+}
+
+.journey-stat > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.journey-stat small {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.journey-stat strong {
+    color: var(--cream);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* MAP SECTION */
+
+.interactive-map-section {
+    padding: 90px 6%;
+}
+
+.interactive-map-section > .section-label,
+.map-heading,
+.map-workspace {
+    width: min(1350px, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.map-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.map-heading h2,
+.progress-heading h2 {
+    font-size: clamp(40px, 5vw, 66px);
+}
+
+.map-heading p,
+.progress-heading p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.reset-journey-btn {
+    padding: 12px 17px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.reset-journey-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.map-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, .8fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* MAP CANVAS */
+
+.map-canvas {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid rgba(201,166,107,.3);
+
+    background:
+        radial-gradient(ellipse at 50% 45%, rgba(201,166,107,.14), transparent 60%),
+        repeating-linear-gradient(
+            25deg,
+            transparent 0,
+            transparent 47px,
+            rgba(201,166,107,.045) 48px,
+            transparent 49px
+        ),
+        repeating-linear-gradient(
+            115deg,
+            transparent 0,
+            transparent 67px,
+            rgba(201,166,107,.035) 68px,
+            transparent 69px
+        ),
+        #1e2019;
+}
+
+.map-canvas::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 9% 15% 11% 15%;
+    border: 2px solid rgba(201,166,107,.23);
+    border-radius: 43% 57% 61% 39% / 42% 36% 64% 58%;
+    transform: rotate(-12deg);
+    background:
+        radial-gradient(ellipse, rgba(201,166,107,.07), transparent 70%);
+}
+
+.map-canvas::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    left: 28%;
+    width: 42%;
+    height: 55%;
+    border: 1px dashed rgba(201,166,107,.2);
+    border-radius: 50%;
+    transform: rotate(28deg);
+}
+
+.map-decoration {
+    position: absolute;
+    color: rgba(225,202,161,.27);
+    font-size: 9px;
+    letter-spacing: 3px;
+    pointer-events: none;
+}
+
+.map-decoration-one {
+    top: 48%;
+    left: 34%;
+    transform: rotate(-20deg);
+}
+
+.map-decoration-two {
+    top: 26%;
+    left: 8%;
+    transform: rotate(-45deg);
+}
+
+.map-compass {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--gold-light);
+}
+
+.map-compass span {
+    font-size: 10px;
+}
+
+.map-compass strong {
+    font-size: 26px;
+}
+
+.map-instruction {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    color: rgba(237,222,196,.65);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* MAP MARKERS */
+
+.map-marker {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--cream);
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.map-marker-dot {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--gold-light);
+    border-radius: 50%;
+    background: #282319;
+    color: var(--gold-light);
+    box-shadow: 0 0 0 5px rgba(201,166,107,.09);
+    transition: .25s ease;
+}
+
+.map-marker-label {
+    padding: 5px 7px;
+    background: rgba(20,19,15,.88);
+    border: 1px solid rgba(201,166,107,.2);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.map-marker:hover .map-marker-dot,
+.map-marker.active .map-marker-dot {
+    background: var(--gold);
+    color: #18140e;
+    transform: scale(1.13);
+    box-shadow: 0 0 0 8px rgba(201,166,107,.15);
+}
+
+.map-marker.discovered .map-marker-dot::after {
+    content: "✓";
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    display: grid;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #8fa879;
+    color: #10140c;
+    font-size: 10px;
+}
+
+/* DETAIL PANEL */
+
+.map-detail-panel {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #1b1915;
+}
+
+.map-detail-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+}
+
+.map-detail-top .eyebrow {
+    font-size: 9px;
+}
+
+.map-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8fa879;
+    box-shadow: 0 0 0 5px rgba(143,168,121,.12);
+}
+
+.map-detail-image {
+    display: grid;
+    place-items: center;
+    height: 190px;
+    background:
+        radial-gradient(circle, rgba(201,166,107,.15), transparent 65%),
+        #29241a;
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.map-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-detail-content {
+    padding: 25px;
+}
+
+.map-detail-region {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.map-detail-content h3 {
+    margin-top: 12px;
+    font-size: 37px;
+}
+
+.map-detail-content > p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.map-detail-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 23px 0;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.map-detail-facts > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.map-detail-facts small {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: .8px;
+}
+
+.map-detail-facts strong {
+    color: var(--gold-light);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.map-explore-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.complete-journey-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px 10px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold-light);
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.complete-journey-btn:hover:not(:disabled) {
+    background: var(--gold);
+    color: #17130d;
+}
+
+.complete-journey-btn:disabled {
+    border-color: #657958;
+    color: #a6bc95;
+    cursor: default;
+}
+
+.map-detail-content .map-reward-note {
+    margin-top: 13px;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* PROGRESS */
+
+.journey-progress-section {
+    padding: 85px 6%;
+    background: #171613;
+}
+
+.journey-progress-section > .section-label,
+.progress-heading,
+.progress-track,
+.progress-labels,
+.discovered-list {
+    width: min(1240px, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.progress-heading {
+    margin-top: 25px;
+}
+
+.progress-track {
+    height: 8px;
+    margin-top: 35px;
+    overflow: hidden;
+    background: #373229;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #a57c40, #e2c38d);
+    transition: width .4s ease;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.discovered-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.empty-discoveries {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.discovered-chip {
+    padding: 11px 15px;
+    border: 1px solid rgba(143,168,121,.4);
+    background: rgba(143,168,121,.08);
+    color: #c3d2b4;
+    font-size: 11px;
+}
+
+/* CTA */
+
+.map-cta {
+    padding: 100px 6%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(201,166,107,.1), transparent 65%),
+        var(--bg);
+}
+
+.map-cta h2 {
+    margin-top: 20px;
+    font-size: clamp(44px, 6vw, 75px);
+}
+
+.map-cta > p {
+    max-width: 550px;
+    margin: 20px auto 30px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .journey-dashboard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .map-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .map-detail-panel {
+        display: grid;
+        grid-template-columns: .8fr 1fr;
+    }
+
+    .map-detail-top {
+        grid-column: 1 / -1;
+    }
+
+    .map-detail-image {
+        height: 100%;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .map-hero {
+        padding: 75px 6%;
+    }
+
+    .map-hero-mark {
+        top: 20%;
+        right: 0;
+        font-size: 190px;
+    }
+
+    .journey-stat {
+        padding: 20px 12px;
+        gap: 10px;
+    }
+
+    .journey-stat-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .journey-stat small {
+        font-size: 8px;
+    }
+
+    .journey-stat strong {
+        font-size: 16px;
+    }
+
+    .interactive-map-section,
+    .journey-progress-section {
+        padding: 65px 6%;
+    }
+
+    .map-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .map-canvas {
+        min-height: 520px;
+    }
+
+    .map-marker-dot {
+        width: 29px;
+        height: 29px;
+        font-size: 11px;
+    }
+
+    .map-marker-label {
+        font-size: 8px;
+        padding: 4px;
+    }
+
+    .map-detail-panel {
+        display: block;
+    }
+
+    .map-detail-image {
+        height: 180px;
+        min-height: auto;
+    }
+
+    .progress-labels {
+        flex-wrap: wrap;
+        font-size: 8px;
+    }
+
+    .map-cta {
+        padding: 75px 7%;
+    }
+}

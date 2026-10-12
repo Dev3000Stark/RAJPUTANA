@@ -1,0 +1,698 @@
+/* =====================================================
+   RAJPUTANA SEASONS PAGE
+   Complete standalone styling
+   ===================================================== */
+
+:root {
+    --season-bg: #11100e;
+    --season-panel: #1b1915;
+    --season-gold: #d8b575;
+    --season-cream: #f6f0e5;
+    --season-muted: #b9b1a4;
+    --season-border: rgba(216, 181, 117, 0.25);
+}
+
+body {
+    margin: 0;
+    background: var(--season-bg);
+    color: var(--season-cream);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+.seasons-hero,
+.seasons-intro,
+.season-explorer,
+.season-planner {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.seasons-hero *,
+.seasons-intro *,
+.season-explorer *,
+.season-planner * {
+    box-sizing: border-box;
+}
+
+/* HERO */
+
+.seasons-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(ellipse at 75% 40%, #655035, transparent 50%),
+        linear-gradient(115deg, #17130f, #332719 65%, #12100d);
+}
+
+.seasons-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image:
+        linear-gradient(90deg, rgba(13, 11, 9, .82), rgba(13, 11, 9, .15)),
+        url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=2000&q=85");
+    background-size: cover;
+    background-position: center 48%;
+}
+
+.seasons-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        0deg,
+        rgba(15, 13, 10, .7),
+        transparent 50%
+    );
+}
+
+.seasons-hero-content {
+    width: min(780px, 84%);
+    margin-left: 9%;
+    padding: 100px 0 120px;
+}
+
+.seasons-hero .eyebrow,
+.season-planner .eyebrow {
+    display: block;
+    margin-bottom: 26px;
+    color: var(--season-gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+.seasons-hero h1 {
+    margin: 0 0 26px;
+    color: #fffaf1;
+    font-size: clamp(46px, 7vw, 94px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -2.5px;
+}
+
+.seasons-hero h1 em {
+    color: var(--season-gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+}
+
+.seasons-hero-content > p {
+    max-width: 520px;
+    margin: 0 0 32px;
+    color: #e4ddd1;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.season-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 22px;
+    border: 1px solid var(--season-gold);
+    background: var(--season-gold);
+    color: #17130c;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    transition: background .25s, transform .25s;
+}
+
+.season-button:hover {
+    background: #efd4a2;
+    transform: translateY(-2px);
+}
+
+.seasons-hero-caption {
+    position: absolute;
+    right: 9%;
+    bottom: 24px;
+    left: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: #ead8b6;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.seasons-hero-caption span:first-child {
+    font-size: 17px;
+    letter-spacing: 0;
+}
+
+/* SHARED SECTION STYLES */
+
+.seasons-intro,
+.season-explorer {
+    padding: 85px 8%;
+}
+
+.season-section-label {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 30px;
+    color: var(--season-gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.season-section-label > span:first-child {
+    display: inline-flex;
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--season-border);
+    border-radius: 50%;
+}
+
+/* INTRO */
+
+.seasons-intro {
+    padding-bottom: 50px;
+}
+
+.seasons-intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.seasons-intro-grid h2,
+.season-heading h2 {
+    margin: 0;
+    color: var(--season-cream);
+    font-size: clamp(34px, 4vw, 55px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.seasons-intro-grid h2 em,
+.season-heading h2 em {
+    color: var(--season-gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+}
+
+.seasons-intro-grid > p {
+    max-width: 540px;
+    margin: 0;
+    color: var(--season-muted);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.season-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--season-border);
+}
+
+.season-highlights > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.season-highlights strong {
+    color: var(--season-gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 37px;
+    font-weight: 500;
+}
+
+.season-highlights span {
+    color: var(--season-muted);
+    font-size: 11px;
+}
+
+/* EXPLORER */
+
+.season-explorer {
+    padding-top: 50px;
+}
+
+.season-heading {
+    margin-bottom: 28px;
+}
+
+.season-heading p {
+    margin: 13px 0 0;
+    color: var(--season-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.season-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 30px 0 35px;
+}
+
+.season-tab {
+    min-height: 44px;
+    padding: 12px 18px;
+    border: 1px solid var(--season-border);
+    border-radius: 2px;
+    background: transparent;
+    color: var(--season-cream);
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.season-tab:hover {
+    border-color: var(--season-gold);
+}
+
+.season-tab.active {
+    border-color: var(--season-gold);
+    background: var(--season-gold);
+    color: #17130c;
+    font-weight: 700;
+}
+
+/* CARDS */
+
+.season-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+}
+
+.season-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .07);
+    background: var(--season-panel);
+    transition: border-color .25s, transform .25s;
+}
+
+.season-card:hover {
+    border-color: var(--season-border);
+    transform: translateY(-4px);
+}
+
+.season-card[hidden] {
+    display: none !important;
+}
+
+.season-card-image {
+    position: relative;
+    min-height: 260px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 23px;
+    background-color: #443523;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    isolation: isolate;
+}
+
+.season-card-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        0deg,
+        rgba(12, 10, 8, .86),
+        rgba(12, 10, 8, .05) 85%
+    );
+    transition: background .25s;
+}
+
+.season-card-image:hover::before {
+    background: linear-gradient(
+        0deg,
+        rgba(12, 10, 8, .92),
+        rgba(12, 10, 8, .15)
+    );
+}
+
+.winter-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80"),
+        linear-gradient(135deg, #8d6a3b, #292017);
+}
+
+.summer-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"),
+        linear-gradient(135deg, #92764b, #332519);
+}
+
+.monsoon-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80"),
+        linear-gradient(135deg, #53664a, #1c2820);
+}
+
+.spring-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"),
+        linear-gradient(135deg, #99754d, #30231a);
+}
+
+.autumn-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80"),
+        linear-gradient(135deg, #826044, #292017);
+}
+
+.season-number {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: white;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 34px;
+}
+
+.season-badge {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    max-width: calc(100% - 100px);
+    padding: 9px 11px;
+    border: 1px solid rgba(255, 255, 255, .45);
+    background: rgba(15, 13, 10, .55);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.season-image-title {
+    color: #fff8eb;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(25px, 3vw, 37px);
+    font-weight: 500;
+}
+
+.season-card-content {
+    padding: 25px 26px 27px;
+}
+
+.season-icon {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid var(--season-border);
+    border-radius: 50%;
+    color: var(--season-gold);
+    font-size: 18px;
+}
+
+.season-card-content h3 {
+    margin: 0 0 12px;
+    color: var(--season-cream);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.season-card-content h3 em {
+    color: var(--season-gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2em;
+}
+
+.season-card-content p {
+    margin: 0 0 22px;
+    color: var(--season-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.season-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 22px;
+}
+
+.season-destinations span {
+    padding: 8px 10px;
+    border: 1px solid var(--season-border);
+    color: #dfd2bc;
+    font-size: 9px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.season-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 16px;
+    border-top: 1px solid var(--season-border);
+    color: var(--season-gold);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.season-link span {
+    font-size: 18px;
+}
+
+.season-link:hover {
+    color: #fff0d2;
+}
+
+.season-empty {
+    padding: 35px 20px;
+    border: 1px solid var(--season-border);
+    text-align: center;
+}
+
+.season-empty h3 {
+    color: var(--season-cream);
+}
+
+.season-empty p {
+    color: var(--season-muted);
+}
+
+/* FINAL CTA */
+
+.season-planner {
+    min-height: 410px;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(14, 12, 9, .96), rgba(14, 12, 9, .70)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat,
+        linear-gradient(120deg, #493521, #17130e);
+    border-top: 1px solid var(--season-border);
+}
+
+.season-planner-content {
+    max-width: 690px;
+}
+
+.season-planner-content h2 {
+    margin: 0 0 20px;
+    color: var(--season-cream);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 500;
+    line-height: 1.13;
+}
+
+.season-planner-content h2 em {
+    color: var(--season-gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.season-planner-content p {
+    max-width: 510px;
+    margin: 0 0 28px;
+    color: var(--season-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+
+.season-planner + .site-footer {
+    margin-top: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .seasons-intro,
+    .season-explorer {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .seasons-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .season-card-image {
+        min-height: 225px;
+    }
+
+    .season-card-content {
+        padding: 21px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .seasons-hero {
+        min-height: 560px;
+    }
+
+    .seasons-hero-image {
+        background-position: 58% center;
+    }
+
+    .seasons-hero-content {
+        width: 86%;
+        margin-left: 7%;
+        padding: 85px 0 105px;
+    }
+
+    .seasons-hero h1 {
+        font-size: clamp(42px, 12vw, 62px);
+        letter-spacing: -1.5px;
+    }
+
+    .seasons-hero-content > p {
+        font-size: 14px;
+    }
+
+    .seasons-hero .eyebrow,
+    .season-planner .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .seasons-hero-caption {
+        right: 7%;
+        left: 7%;
+        bottom: 20px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .seasons-hero-caption span:first-child {
+        font-size: 14px;
+    }
+
+    .seasons-intro,
+    .season-explorer {
+        padding: 58px 6%;
+    }
+
+    .seasons-intro-grid h2,
+    .season-heading h2 {
+        font-size: 36px;
+        letter-spacing: -.8px;
+    }
+
+    .seasons-intro-grid {
+        gap: 18px;
+    }
+
+    .season-highlights {
+        gap: 12px;
+        margin-top: 35px;
+    }
+
+    .season-highlights strong {
+        font-size: 29px;
+    }
+
+    .season-highlights span {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .season-section-label {
+        gap: 9px;
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .season-tabs {
+        gap: 8px;
+        margin: 24px 0 28px;
+    }
+
+    .season-tab {
+        min-height: 42px;
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .season-cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .season-card-image {
+        min-height: 235px;
+    }
+
+    .season-card-content {
+        padding: 22px;
+    }
+
+    .season-planner {
+        min-height: 370px;
+        padding: 60px 7%;
+    }
+
+    .season-planner-content h2 {
+        font-size: 38px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore Rajasthan with RAJPUTANA. Discover heritage sites, seasonal destinations, adventure experiences and plan your journey.">
+
+    <title>RAJPUTANA | Tourism & Adventure Network</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+
+    <style>
+        .raj-home {
+            color: #30251c;
+            background: #faf7f1;
+            min-height: 100vh;
+        }
+
+        .raj-home * {
+            box-sizing: border-box;
+        }
+
+        .raj-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+            flex-wrap: wrap;
+            padding: 18px 7%;
+            background: #191612;
+        }
+
+        .raj-brand {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .raj-brand span {
+            color: #e9ad58;
+        }
+
+        .raj-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 21px;
+            flex-wrap: wrap;
+        }
+
+        .raj-links a {
+            color: #f1e8dc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color .2s ease;
+        }
+
+        .raj-links a:hover {
+            color: #efb55f;
+        }
+
+        .raj-links .raj-planner-link {
+            padding: 11px 16px;
+            border-radius: 6px;
+            background: #d8943e;
+            color: #20170f;
+            font-weight: 700;
+        }
+
+        .raj-hero {
+            display: flex;
+            align-items: center;
+            min-height: 570px;
+            padding: 75px 8%;
+            color: #fff;
+            background:
+                linear-gradient(90deg,
+                    rgba(20, 17, 13, .91),
+                    rgba(20, 17, 13, .48)),
+                url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85")
+                center / cover no-repeat;
+        }
+
+        .raj-hero-content {
+            max-width: 760px;
+        }
+
+        .raj-eyebrow {
+            color: #e9ad58;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .raj-hero h1 {
+            margin: 20px 0;
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.08;
+        }
+
+        .raj-hero h1 span {
+            color: #efb55f;
+        }
+
+        .raj-hero p {
+            max-width: 600px;
+            color: #f0e5d8;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .raj-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .raj-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 48px;
+            padding: 13px 21px;
+            border: 1px solid #d8943e;
+            border-radius: 6px;
+            background: #d8943e;
+            color: #21170d;
+            font-weight: 700;
+            text-decoration: none;
+            transition: .2s ease;
+        }
+
+        .raj-button:hover {
+            transform: translateY(-2px);
+            background: #f0b55d;
+        }
+
+        .raj-button-outline {
+            color: #fff;
+            background: transparent;
+            border-color: rgba(255, 255, 255, .65);
+        }
+
+        .raj-button-outline:hover {
+            color: #21170d;
+            background: #fff;
+        }
+
+        .raj-section {
+            padding: 75px 8%;
+        }
+
+        .raj-section-heading {
+            max-width: 720px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .raj-section-heading h2 {
+            margin: 12px 0;
+            font-size: clamp(29px, 4vw, 43px);
+        }
+
+        .raj-section-heading p {
+            color: #746b60;
+            line-height: 1.8;
+        }
+
+        .raj-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 23px;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .raj-feature-card {
+            padding: 28px;
+            border: 1px solid #e9dfd1;
+            border-radius: 12px;
+            background: #fff;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .raj-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(40, 30, 20, .08);
+        }
+
+        .raj-feature-icon {
+            display: grid;
+            place-items: center;
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            background: #f6e9d5;
+            font-size: 26px;
+        }
+
+        .raj-feature-card h3 {
+            margin: 20px 0 10px;
+            font-size: 21px;
+        }
+
+        .raj-feature-card p {
+            color: #746b60;
+            line-height: 1.8;
+        }
+
+        .raj-feature-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #9a5b1b;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .raj-planner-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 42px;
+            border-radius: 15px;
+            background: #29221b;
+            color: #fff;
+        }
+
+        .raj-planner-banner > div {
+            max-width: 650px;
+        }
+
+        .raj-planner-banner h2 {
+            margin: 12px 0;
+            font-size: clamp(27px, 4vw, 38px);
+        }
+
+        .raj-planner-banner p {
+            color: #ded2c2;
+            line-height: 1.8;
+        }
+
+        .raj-footer {
+            padding: 35px 7%;
+            text-align: center;
+            background: #191612;
+            color: #ded2c2;
+        }
+
+        .raj-footer p {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 850px) {
+            .raj-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .raj-feature-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .raj-hero {
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .raj-nav {
+                padding: 18px 5%;
+            }
+
+            .raj-links {
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            .raj-hero {
+                padding: 65px 6%;
+            }
+
+            .raj-section {
+                padding: 55px 5%;
+            }
+
+            .raj-feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .raj-planner-banner {
+                padding: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body class="raj-home">
+
+    <!-- MAIN NAVIGATION -->
+    <header class="raj-nav">
+
+        <a href="index.html" class="raj-brand">
+            RAJPUTANA<span>.</span>
+        </a>
+
+        <nav class="raj-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pages/explore.html">Explore</a>
+            <a href="pages/places.html">Places</a>
+            <a href="pages/seasons.html">Seasons</a>
+            <a href="pages/map.html">Journey Map</a>
+            <a href="pages/about.html">About</a>
+
+            <!-- NEW SMART TRIP PLANNER LINK -->
+            <a href="pages/trip-planner.html" class="raj-planner-link">
+                Trip Planner ↗
+            </a>
+        </nav>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="raj-hero">
+
+            <div class="raj-hero-content">
+
+                <span class="raj-eyebrow">
+                    WELCOME TO THE LAND OF ROYALTY
+                </span>
+
+                <h1>
+                    पधारो म्हारे देश<br>
+                    Discover <span>Rajasthan</span>
+                </h1>
+
+                <p>
+                    Explore magnificent forts, golden deserts, peaceful lakes
+                    and vibrant traditions. Your next unforgettable adventure
+                    begins with RAJPUTANA.
+                </p>
+
+                <div class="raj-actions">
+
+                    <a href="pages/explore.html" class="raj-button">
+                        Explore Rajasthan →
+                    </a>
+
+                    <a href="pages/trip-planner.html"
+                       class="raj-button raj-button-outline">
+                        Plan Your Trip
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FEATURES -->
+        <section class="raj-section">
+
+            <div class="raj-section-heading">
+
+                <span class="raj-eyebrow">YOUR JOURNEY STARTS HERE</span>
+
+                <h2>Experience Rajasthan Your Way</h2>
+
+                <p>
+                    Discover heritage, choose destinations according to the
+                    season, explore your journey and plan a memorable trip.
+                </p>
+
+            </div>
+
+            <div class="raj-feature-grid">
+
+                <article class="raj-feature-card">
+
+                    <div class="raj-feature-icon">🏰</div>
+
+                    <h3>Explore Destinations</h3>
+
+                    <p>
+                        Discover historic forts, royal palaces, beautiful
+                        lakes and the cultural treasures of Rajasthan.
+                    </p>
+
+                    <a href="pages/explore.html">Start Exploring →</a>
+
+                </article>
+
+                <article class="raj-feature-card">
+
+                    <div class="raj-feature-icon">🌤️</div>
+
+                    <h3>Seasonal Travel</h3>
+
+                    <p>
+                        Find destination suggestions based on your preferred
+                        season and the experiences you want.
+                    </p>
+
+                    <a href="pages/seasons.html">Explore Seasons →</a>
+
+                </article>
+
+                <article class="raj-feature-card">
+
+                    <div class="raj-feature-icon">🗺️</div>
+
+                    <h3>Interactive Journey</h3>
+
+                    <p>
+                        Explore destinations through the journey map and
+                        discover places along your Rajasthan adventure.
+                    </p>
+
+                    <a href="pages/map.html">Open Journey Map →</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SMART TRIP PLANNER PROMOTION -->
+        <section class="raj-section">
+
+            <div class="raj-planner-banner">
+
+                <div>
+
+                    <span class="raj-eyebrow">YOUR TRIP, YOUR BUDGET</span>
+
+                    <h2>Plan Your Perfect Rajasthan Adventure</h2>
+
+                    <p>
+                        Choose your destination, number of travellers, trip
+                        duration and budget. Generate a suggested itinerary
+                        and estimate your travel expenses.
+                    </p>
+
+                </div>
+
+                <a href="pages/trip-planner.html" class="raj-button">
+                    Open Smart Trip Planner →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="raj-footer">
+
+        <a href="index.html" class="raj-brand">
+            RAJPUTANA<span>.</span>
+        </a>
+
+        <p>Discover Rajasthan. Experience the Royal Journey.</p>
+
+        <p>
+            © 2026 RAJPUTANA — Tourism & Adventure Network
+        </p>
+
+    </footer>
+
+    <script src="JS/main.js"></script>
+
+</body>
+</html>
+

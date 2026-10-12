@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Trip Planner | RAJPUTANA</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/trip-planner.css">
+</head>
+
+<body>
+
+<header class="planner-header">
+    <a href="../index.html" class="planner-logo">
+        RAJPUTANA<span>.</span>
+    </a>
+
+    <nav class="planner-nav">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="seasons.html">Seasons</a>
+        <a href="map.html">Journey Map</a>
+        <a href="trip-planner.html" class="active">Trip Planner</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="planner-hero">
+        <div class="hero-content">
+            <span class="eyebrow">YOUR JOURNEY, YOUR WAY</span>
+
+            <h1>Plan Your Perfect <span>Rajasthan</span> Trip</h1>
+
+            <p>
+                Discover royal forts, golden deserts, beautiful lakes and
+                colourful culture. Create your itinerary and estimate your
+                travel budget in one place.
+            </p>
+
+            <a href="#planner-form" class="planner-primary-btn">
+                Plan My Journey →
+            </a>
+        </div>
+
+        <div class="hero-stat">
+            <div>
+                <strong>33+</strong>
+                <span>Districts to Explore</span>
+            </div>
+            <div>
+                <strong>100+</strong>
+                <span>Travel Experiences</span>
+            </div>
+            <div>
+                <strong>1</strong>
+                <span>Unforgettable Journey</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="planner-section" id="planner-form">
+
+        <div class="section-heading">
+            <span class="eyebrow">LET'S BUILD YOUR ITINERARY</span>
+            <h2>Your Trip Details</h2>
+            <p>Tell us what you want to experience in Rajasthan.</p>
+        </div>
+
+        <div class="planner-layout">
+
+            <form id="tripForm" class="planner-form">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="travellers">Number of travellers</label>
+                        <input
+                            type="number"
+                            id="travellers"
+                            min="1"
+                            max="50"
+                            value="2"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="days">Trip duration (days)</label>
+                        <input
+                            type="number"
+                            id="days"
+                            min="1"
+                            max="30"
+                            value="3"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Choose your destination</label>
+
+                    <select id="destination" required>
+                        <option value="jaipur">Jaipur — The Pink City</option>
+                        <option value="udaipur">Udaipur — The City of Lakes</option>
+                        <option value="jodhpur">Jodhpur — The Blue City</option>
+                        <option value="jaisalmer">Jaisalmer — The Golden City</option>
+                        <option value="pushkar">Pushkar — The Sacred City</option>
+                        <option value="mountabu">Mount Abu — The Hill Station</option>
+                        <option value="bikaner">Bikaner — The Desert Heritage</option>
+                        <option value="chittorgarh">Chittorgarh — The Land of Forts</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelStyle">What interests you most?</label>
+
+                    <select id="travelStyle" required>
+                        <option value="heritage">History & Heritage</option>
+                        <option value="adventure">Adventure & Desert</option>
+                        <option value="culture">Culture & Local Food</option>
+                        <option value="nature">Nature & Relaxation</option>
+                        <option value="mixed">A little bit of everything</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="season">Preferred travel season</label>
+
+                    <select id="season" required>
+                        <option value="winter">Winter — October to March</option>
+                        <option value="summer">Summer — April to June</option>
+                        <option value="monsoon">Monsoon — July to September</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Total budget (₹)</label>
+
+                    <input
+                        type="number"
+                        id="budget"
+                        min="500"
+                        max="10000000"
+                        step="100"
+                        value="10000"
+                        required
+                    >
+
+                    <small>Enter the total budget for your entire group.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="transport">Preferred transport</label>
+
+                    <select id="transport" required>
+                        <option value="bus">Bus / Public Transport</option>
+                        <option value="train">Train</option>
+                        <option value="car">Private Car</option>
+                        <option value="bike">Bike / Two-wheeler</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="planner-primary-btn submit-btn">
+                    Generate My Trip Plan →
+                </button>
+
+                <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+            </form>
+
+            <aside class="planner-side-panel">
+
+                <div class="side-icon">✦</div>
+
+                <h3>Your Rajasthan Adventure Starts Here</h3>
+
+                <p>
+                    A good journey begins with a good plan. Choose your
+                    destination, set your budget and let RAJPUTANA help
+                    organise your experience.
+                </p>
+
+                <div class="side-feature">
+                    <span>01</span>
+                    <div>
+                        <strong>Personalised itinerary</strong>
+                        <p>Get a day-by-day travel outline.</p>
+                    </div>
+                </div>
+
+                <div class="side-feature">
+                    <span>02</span>
+                    <div>
+                        <strong>Budget estimation</strong>
+                        <p>Understand your estimated expenses.</p>
+                    </div>
+                </div>
+
+                <div class="side-feature">
+                    <span>03</span>
+                    <div>
+                        <strong>Discover more</strong>
+                        <p>Find places that match your interests.</p>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </section>
+
+    <section id="tripResults" class="trip-results" hidden>
+
+        <div class="section-heading">
+            <span class="eyebrow">YOUR PERSONAL TRAVEL BLUEPRINT</span>
+            <h2>Your Rajasthan Itinerary</h2>
+            <p id="tripSummary"></p>
+        </div>
+
+        <div class="budget-overview">
+            <div class="budget-card">
+                <span>Your total budget</span>
+                <strong id="totalBudget">₹0</strong>
+            </div>
+
+            <div class="budget-card">
+                <span>Estimated trip cost</span>
+                <strong id="estimatedCost">₹0</strong>
+            </div>
+
+            <div class="budget-card">
+                <span>Estimated balance</span>
+                <strong id="budgetBalance">₹0</strong>
+            </div>
+        </div>
+
+        <p id="budgetMessage" class="budget-message" aria-live="polite"></p>
+
+        <div id="expenseBreakdown" class="expense-breakdown"></div>
+
+        <h3 class="itinerary-title">Your Day-by-Day Plan</h3>
+
+        <div id="itineraryDays" class="itinerary-days"></div>
+
+        <div class="results-actions">
+            <button type="button" id="printTrip" class="planner-primary-btn">
+                Print / Save as PDF
+            </button>
+
+            <button type="button" id="editTrip" class="planner-secondary-btn">
+                Edit Trip Details
+            </button>
+        </div>
+
+        <p class="estimate-note">
+            Travel and accommodation costs are illustrative estimates, not
+            live quotes. Actual expenses depend on dates, availability,
+            travel distance and personal preferences. Confirm prices before
+            travelling.
+        </p>
+
+    </section>
+
+</main>
+
+<footer class="planner-footer">
+    <a href="../index.html" class="planner-logo">RAJPUTANA<span>.</span></a>
+    <p>Discover Rajasthan. Experience the Royal Journey.</p>
+    <p>© 2026 RAJPUTANA — Tourism & Adventure Network</p>
+</footer>
+
+<script src="../JS/trip-planner.js"></script>
+
+</body>
+</html>
+
